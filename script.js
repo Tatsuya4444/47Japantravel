@@ -60,6 +60,8 @@ throwButton.addEventListener('click', () => {
 
     // アニメーション中はボタンを押せないようにする
     throwButton.disabled = true;
+    resultText.textContent = "ルーレット中...";
+    resultText.classList.add('loading'); // ← この行を追加
 
     // ★ 4-1. アニメーションのパラメータ（ここの数値を調整すると動きが変わります）
     let currentSpeed = 80;    // 初期の速度 (ミリ秒)。小さいほど速い。
@@ -124,6 +126,7 @@ function updateMapColors(namesToHighlight, animatingCode = null) {
 db.collection('rooms').doc('sharedRoom').onSnapshot((doc) => {
     // ボタンの有効化
     throwButton.disabled = false;
+    resultText.classList.remove('loading'); // ← この行を追加（クラスを削除してスタイルを元に戻す）
 
     if (doc.exists && doc.data().selected) {
         selectedPrefNames = doc.data().selected;
