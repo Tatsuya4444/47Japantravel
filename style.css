@@ -124,3 +124,7 @@ g.prefecture:hover polygon {
     /* 上下の余白を調整 */
     margin: -10px 0 20px 0;
 }
+/* ルーレット中のテキストスタイル */
+#result-text.loading {
+    font-size: 1.5em; /* 通常より小さいサイズに調整 */
+}
