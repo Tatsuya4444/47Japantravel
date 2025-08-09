@@ -125,3 +125,8 @@ g.prefecture:hover polygon {
     margin: -10px 0 20px 0;
 }
 
+/* ルーレット中のテキストスタイル */
+#result-text.loading {
+    font-size: 1.5em; /* 通常より小さいサイズに調整 */
+    color: #5f6368;  /* 少し落ち着いた色に */
+}
