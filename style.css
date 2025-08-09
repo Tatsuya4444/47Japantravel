@@ -1,0 +1,126 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    color: #10a88c;
+}
+
+.darts-board {
+    background-color: white;
+    border: 5px solid #1a73e8;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 400px;
+    margin: 30px auto;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+#result-text {
+    font-size: 3em;
+    font-weight: bold;
+    color: #d93025;
+    margin: 10px 0;
+    min-height: 60px; /* 文字が無くても高さが潰れないように */
+}
+
+#throw-button {
+    background-color: #10a88c;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    height: 60px; /* GIFと同じ高さに揃える */
+    padding: 0 30px; /* 上下のpaddingを0にして中央揃え */
+    font-size: 1.2em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: flex;
+    align-items: center;
+}
+
+#throw-button:hover {
+    background-color: #0d8e76;
+}
+
+/* SVG地図の基本スタイル */
+.geolonia-svg-map { /* SVG本体に付いているクラス名を使う */
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    margin: 20px auto;
+}
+
+/* 各都道府県の図形（pathやpolygon）の基本スタイル */
+g.prefecture path,
+g.prefecture polygon {
+    fill: #ccc; /* 通常時の色（グレー） */
+    stroke: #fff; /* 県境の色（白） */
+    stroke-width: 1;
+    transition: fill 0.3s; /* 色が滑らかに変わるアニメーション */
+}
+
+/* マウスをグループに乗せた時に、中の図形の色を変える */
+g.prefecture:hover path,
+g.prefecture:hover polygon {
+    fill: #aae6e6; /* 明るい青緑色 */
+    cursor: pointer;
+}
+
+/* ボタンとGIFを横に並べて中央揃えにするためのスタイル */
+.throw-container {
+    display: flex;           /* 要素を横並びにする */
+    justify-content: center; /* 全体を中央に配置 */
+    align-items: center;     /* 上下の位置を中央に揃える */
+}
+
+/* GIF画像のサイズを調整するスタイル */
+.throw-gif {
+    height: 70px; /* 画像の高さを指定。この数値を調整してください */
+    width: auto;  /* 横幅は自動調整して縦横比を保つ */
+}
+
+/* 要素を非表示にするためのクラス */
+.hidden {
+    display: none;
+}
+
+/* コンプリートメッセージのスタイル */
+#complete-message {
+    color: #d93025; /* 文字の色を赤に */
+    font-size: 2em; /* 文字を大きく */
+    font-weight: bold;
+    margin-bottom: 10px; /* 下の要素との余白 */
+}
+
+/* リセットボタンのスタイル */
+#reset-button {
+    background-color: #5f6368; /* 少し落ち着いた色 */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: background-color 0.3s;
+}
+
+#reset-button:hover {
+    background-color: #3c4043;
+}
+
+/* 進捗カウンターのスタイル */
+#progress-counter {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #3c4043;
+    /* 上下の余白を調整 */
+    margin: -10px 0 20px 0;
+}
