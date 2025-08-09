@@ -60,8 +60,6 @@ throwButton.addEventListener('click', () => {
 
     // アニメーション中はボタンを押せないようにする
     throwButton.disabled = true;
-    resultText.textContent = "ルーレット中...";
-  　resultText.classList.add('loading'); // ← この行を追加
 
     // ★ 4-1. アニメーションのパラメータ（ここの数値を調整すると動きが変わります）
     let currentSpeed = 80;    // 初期の速度 (ミリ秒)。小さいほど速い。
