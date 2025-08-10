@@ -140,7 +140,7 @@ db.collection('rooms').doc('sharedRoom').onSnapshot((doc) => {
 
         if (selectedPrefNames.length >= 47) {
             // メッセージとリセットボタンを表示
-            completeMessage.textContent = "コンプリート！おめでとう！";
+            completeMessage.textContent = "コンプリート！";
             completeMessage.classList.remove('hidden');
             resetButton.classList.remove('hidden');
             
