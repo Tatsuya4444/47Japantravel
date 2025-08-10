@@ -167,7 +167,7 @@ g.prefecture:hover polygon {
     }
 
     #result-text {
-        font-size: 2.2em; /* 結果の文字も少し小さく */
+        font-size: 1.8em; /* 結果の文字も少し小さく */
         min-height: 45px;
     }
 
@@ -182,7 +182,7 @@ g.prefecture:hover polygon {
     }
     
     .throw-gif {
-        height: 40px;
+        height: 65px;
     }
 
     #reset-button {
